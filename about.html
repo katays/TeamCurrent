@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="CSS/style.css">
+      <link rel="stylesheet" href="CSS/about.css">
+      <script src="JS/script.js" defer></script>
+      <title>WebFoxtrot</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  </head>
+  <body>
+      <!-- Navbar set up - Last Updated on April 4 2022- by KS and BC - adapted from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+    <header class="header">
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" >Home</a>
+            <!-- Add a drop down to our nav bar for the project section - by KS & BC - On April 5 2022 - Adapted from https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+            <div class="dropdown">
+                <button class="dropbtn">Project
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Project.html">Problem Statement</a> <!--currently set to link to the section on 1 page can change to diff pages if needed - BC -->
+                    <a href="Project.html#paragraph2">Journey</a>
+                    <a href="Project.html#paragraph3">Solution</a>
+                </div>
+            </div>
+            <a href="more.html">More Info</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="contact.html">Contact </a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleResponsiveNavMenu()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <!-- Button to scroll back to top of page - BC-->
+    <button onclick="topFunction()" id="topBtn" title="Back to top">Top</button>
+    <!-- Hero Image - BC -->
+    <div class="hero-image">
+        <div class="hero-text">
+            WebFoxtrot
+        </div>
+    </div>
+    <section id="about-header">
+      <h2 class="page-header">Meet The Team</h2>
+      <p> The WebFoxtrot Team is a diverse group of individuals all with a shared
+        passion for GIS. Each member is dedicated to collaborating on meaningful 
+        projects where they can use their vibrant skills in GIS and many other fields
+        to create meaningful web solutions. To learn more about the members of WebFoxtrot
+        checkout their portfolios bellow.   
+      </p>
+    </section>
+    <!-- Team Member Bios - BC -->
+    <!-- Image overlay of each team member - BC - Image overlay adapted from https://www.w3schools.com/howto/howto_css_image_overlay.asp -->
+    <div id="about-container" class="flex-container">
+      <div class="flex-child Amanda"> 
+        <img src="Images/AboutUs/amanda.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">
+            Amanda Hunter<br><br>is an environmentally focused documentary filmmaker 
+            and multidisciplinary artist. Her love for communicating science visually has resulted in 
+            her newfound specialization in GIS. Telling stories spatially is her greatest passion.
+          </div>
+        </div>
+      </div>
+      <div class="flex-child Steph"> 
+        <img src="Images/AboutUs/Steph.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">
+            Stephanie Scane<br><br>Stephanie is specialized in forest conservation and now GIS. She hopes to one day be able
+            to combine all of her passions into a dream career of supporting wildlife conservation in the form of data analysis and mapping.
+          </div>
+        </div>
+      </div>
+      <div class="flex-child Kathleen"> 
+        <img src="Images/AboutUs/Kathleen.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">
+            Kathleen Soodhoo<br><br>Kathleen specializes in environmental studies and is excited to be able to combine her passion for science, the 
+            environment, and newfound GIS skills to create highly engaging and informative spatial content.<br>
+          </div>
+        </div>
+      </div>
+      <div class="flex-child Becca"> 
+        <img src="Images/AboutUs/Becca.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">
+            Becca Carmichael<br><br>Becca specializes in environmental geography.  She has combined her passions for the natural world and GIS to 
+            provide well-rounded digital map-making and data analysis.
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- Footer BC -->
+    <footer>
+      <p>WebFoxtrot</p>
+    </footer>
+  </body>
+</html>

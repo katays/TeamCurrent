@@ -1,0 +1,787 @@
+/* Website to find the colour palette https://coolors.co/palettes/trending */ 
+/* Colour palette we are currently using: https://coolors.co/palette/001219-005f73-0a9396-94d2bd-e9d8a6-ee9b00-ca6702-bb3e03-ae2012-9b2226 */
+/* Font we are using is: Arial, Helvetica, sans-serif; */ 
+
+/* MAIN STYLE */ 
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: #DEEAEC;
+}
+
+.page-header {
+    font-size: calc(16px + 2vw);
+    color: black;
+    font-weight: 700;
+}
+
+p {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navbar - Last Update April 6 2022 by KS and BC */ 
+/* this is the colour settings for the whole navbar - BC */ 
+.topnav {
+    overflow: hidden;
+    background-color: #005F73; 
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* settings for when you are hovering over a new page in navbar and when you are hovering over Projects dropdown- BC */
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #54b4b6;
+    color: white;
+}
+
+/* page you are on is highlighted with these settings - BC */
+.topnav .active {
+    background-color: #0A9396;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    /* Hide most of the menu buttons and show the hamburger menu */
+    .topnav a:not(:first-child) {display: none;}
+    div.dropdown {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    /* topnav styles if the topnav has the "responsive" class - set when the user clicks on the hamburger menu*/
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a,
+    .topnav.responsive div.dropdown {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* settings for the dropdown for Projects in the navbar- KS & BC */ 
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0A9396;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #54b4b6;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Image - Last Update April 5 - By BC*/
+.hero-image {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../Images/HeroImages/Water.jpg");
+}
+
+/* Add text to the Hero Image here */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(221, 214, 214);
+    text-shadow: 2px 2px #2C3531;
+    font-size: 60pt;
+    font-family: Tahoma, sans-serif;
+}
+
+@media all and (max-width: 775px) {
+    .hero-text {
+        font-size: 30pt;
+    }
+}
+
+/* Footer - Last Updated April 5 - BC */ 
+footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2px 0px;
+    margin: 8px 0px;
+    background-color: #005F73;
+    color: white;
+    text-align: center;
+    clear: both;
+}
+
+footer p {
+    height: 19px;
+}
+
+/* Scroll to the Top Button */ 
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #CA6702;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#topBtn:hover {
+    background-color: #BB3E03;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 70px;
+}
+
+h2 {
+  font-size: 35px;
+  color: #9B2226;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+h3 {
+ font-size: 30px;
+ color: #AE2012;
+ text-align: center;
+ padding-top: 20px;
+}
+
+h4 {
+  font-size: 25px;
+  color: #BB3E03;
+  text-align: center;
+}
+
+/* HOME PAGE */
+
+/* home page Parallax - last updated April 20 BC - adapted from https://www.w3schools.com/howto/howto_css_parallax.asp */ 
+.parallax {
+    background-image: url("../Images/HeroImages/splash.jpg");
+    min-height: 700px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: url("../Images/HeroImages/Water.jpg");
+    min-height: 500px; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*.intro {
+    text-align: center;
+    margin: 40px;
+    padding: 10px;
+}*/
+
+/* Introduction page CSS KS April 6, april 17, added additional style classes april 19 ah*/
+/*.problem-intro { 
+    padding: 50px;
+    width: 80%
+}
+
+.problem { 
+    color: #9B2226;
+    text-align: left;
+}*/
+
+/*19/04/2022 AH*/
+.map-o {
+    height: 345px;
+    float: left;
+    margin-right: 50px;
+    margin-left: 70px;
+    margin-bottom: 90px;
+    margin-top: 30px;
+}
+/* The intention of this @media section is that once the page becomes so narrow
+that the image and the header next to it can't fit side-by side,
+we change the image to just be simple a block element displayed above the text */
+@media screen and (max-width: 765px) {
+    .map-o {
+        margin: 25px auto 0px;
+        float: none;
+        display: block;
+    }
+}
+
+#background-info {
+    padding-bottom: 30px;
+}
+#background-info-text {
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+#goals {
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 30px;
+}
+
+/* PROJECT PAGE */ 
+
+/* StoryMap and Project Page SS - April 19*/
+.story1 {
+    max-width: 40%;
+    float: right;
+    margin-right: 20px;
+    margin-top: 100px;
+}
+
+#stephs1 {
+    width: 50%;
+    float: left;
+    margin-top: 5px; 
+    padding: 35px 100px 10px 100px;
+} 
+
+#stephs2 {
+    width: 50%; 
+    float: right;
+    margin-top: 5px; 
+    padding: 75px 100px 10px 100px;
+} 
+
+.steph-pic { 
+    width: 50%;
+}
+
+/*Solution Final Dashboard and StoryMap - Last updated April 19 BC */ 
+.final-dashboard {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-storymap {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+/* div phase separator - KS - April 19*/
+/*.div-separate {
+    background-color: #E8F5F1;
+    padding: 5px;
+}*/
+
+/*div styling projects page for clarity - KS April 19*/
+.phase1 {
+    background-color: #EBF2F3 ;
+    padding: 0px 0px 30px 0px;
+}
+
+/*methodology - KS April 19*/
+.methodology {
+    max-width: 50%;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+}
+@media screen and (max-width: 600px) {
+    .methodology {
+        max-width: 75%;
+    }
+}
+
+/* table for problem statement KS & BC April 19*/
+table {
+    overflow-x:auto  
+}
+.t-heading {
+    padding: 50px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #005F73;
+}
+.t-heading-responsive {
+    display: none;
+    padding: 50px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #005F73;
+}
+.t-heading-responsive td {
+    text-align: center;
+}
+@media screen and (max-width: 600px) {
+    .t-heading {
+        display: none;
+    }
+    .t-heading-responsive {
+        display: block;
+    }
+    .t-exp {
+        text-align: center;
+    }
+}
+
+.t-exp {
+    color:#9B2226;
+    font-weight: bold;
+}
+
+ /*Project Page - Main Settings KS (old bg colour #E8F5F1)*/ 
+.pDash {
+    max-width: 40%;
+    float: right; 
+    margin-top: 50px;
+    margin-right: 10px;
+    background-color: #def0ea;
+    padding-right: 30px;
+}
+/* on thin screens, stack block elements on top of each other instead of floating*/
+@media screen and (max-width: 900px) {
+    .pDash {
+        float: none;
+        max-width: 95%;
+        margin-left: 10px;
+    }
+    div.slider {
+        width: 95%;
+    }
+    button.btn {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    div.slider2 {
+        width: 95%;
+        margin: auto;
+    }
+    button.btn1 {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .story1 {
+        float: none;
+        max-width: 95%;
+    }
+    #stephs1,
+    #stephs2 {
+        float: none;
+        width: 95%;
+    }
+    .steph-pic {
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+li {
+    padding: 20px;
+}
+  
+#paragraph1 {
+    background-color: #cde9ea;
+    padding-right: 50px;
+    padding-bottom: 30px;
+}
+
+#paragraph2 h1 {
+    padding-top: 40px;
+}
+
+#paragraph3 {
+    background-color: #cde9ea;
+    padding-bottom: 30px;
+}
+
+/* KS Journey (methodology) static paragraph april 17 */
+/*.staticE {
+    margin-left:100px;
+    max-width:40%
+}
+
+.static1 {
+   max-width:20%;
+   padding:40px;
+}*/
+
+/* Project page margins - KS & SS*/
+#project-page {
+    margin: 25px 40px;
+}
+
+/* Slider - ks  */
+.slider {
+    /* margin:50px auto; */
+    width: 50%;
+    height: 650px;
+}
+
+.slider2 {
+    width: 50%;
+    margin: auto;
+}
+
+.img-box img {
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: #c6e6dc;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #71140C;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+  
+.btn1 {
+    border: none;
+    outline: none;
+    background: #c6e6dc;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #71140C;
+    cursor: pointer;
+    margin: 20px auto;
+}
+  
+.btn:hover {
+      background: #94D2BD;
+}
+  
+.btn1:hover {
+      background: #94D2BD;
+}
+  
+.big-headings h1 {
+    /* color: #001219; I took this out cause it kept overwriting my headings -ks */
+    text-shadow: none;
+    font-size: 40px;
+}
+
+img {
+    padding: 5px;
+}
+
+/* Divider btw sections in "body" of Methodology */
+.thin-divider {
+    height: 4px;
+    background-color: #deeaec;
+    clear: both;
+}
+
+p.project-page {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+/* MORE INFO PAGE */ 
+
+/*image styles April 19 AH*/
+.image-right {
+    float: right;
+}
+  
+.image-left {
+    float: left;
+    max-height: 100%;
+    max-width: 100%;
+}
+  
+.image-centre { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+  
+#water-quality-explained {
+    height: 330;
+    align-items: center;
+    color: #005F73;
+    margin: 20px 20px 20px 70px;
+    line-height: 25px;
+    clear:both;
+}
+
+#aerial-water-tree-img {
+    margin-right: 70px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    max-width: 100%;
+    max-height: 100%
+
+}
+  
+/*#map-points-img {
+    height: 335px;
+    margin-right: 70px;
+    margin-left: 50px;
+}*/
+ 
+/*image styles April 19 AH*/
+/*#Background {
+height: 330px;
+align-items: center;
+color: #005F73;
+margin: 20px 20px 20px 70px;
+line-height: 25px;
+}
+
+#Homepage-img {
+    height: auto;
+    margin: 140px 70px 10px 50px;
+}*/ 
+
+/*19/04/2022 AH*/
+/*.last-paragraph {
+  color: #005F73;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 100px;
+  line-height: auto;
+  max-width: 80%;
+}*/
+
+/*19/04/2022 AH*/
+.to-the-left{
+    font-size:35px;
+    color: #9B2226;
+    text-align:left;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+/*.para1 {
+    color: #005F73;
+    line-height: 25px;
+    max-width:100%;
+}*/
+
+/*19/04/2022 AH*/
+.para-margin { 
+    color: #005F73;
+    margin: auto;
+    line-height: auto;
+    max-width: 80%;
+}
+
+/*.para { 
+    color: #005F73;
+    line-height: 25px;
+    max-width:100%;
+    float:left;
+}*/
+
+/*19/04/2022 AH*/
+.pretty-box {
+    background-color: #005F73;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    line-height: 25px;
+    max-width: 100%;
+    font-size: 20px;
+    display: inline-block;
+}
+
+/*adjusted parameters AH 20/04/2022*/
+.tech {
+    padding-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%
+}
+
+#more-info-introduction {
+    text-align: center;
+}
+
+/* ABOUT US PAGE */
+
+/* About us image overlay BC April 16 */ 
+.flex-container {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    display: flex;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 525px;
+    max-width: 350px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #BB3E03;
+    /* needs same max size as the image */
+    max-height: 525px;
+    max-width: 350px;
+}
+
+.flex-child:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 1.7vw;
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+    /* needs same max size as the image */
+    max-height: 525px;
+    max-width: 350px;
+}
+
+  .flex-child {
+    position: relative;
+    flex: 1;
+    width: 100%;
+}  
+  
+/* CONTACT US PAGE */ 
+
+/* Contact Us Form - BC - April 16 */ 
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+input[type=submit] {
+    background-color: #BB3e03;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #BB3e03;
+}
+
+  #contact-container {
+    border-radius: 5px;
+    background-color: #cde9ea;
+    padding: 40px 95px 40px 90px;
+}
